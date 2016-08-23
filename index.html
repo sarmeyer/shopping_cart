@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='shopping'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <title>MEAN Tea</title>
+  </head>
+  <body>
+    <div class='topBar'>Guarnteed Awesome!</div>
+    <h1 class='title'><i>Welcome to MEAN Tea!</i></h1>
+    <nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#/">Home <span class="sr-only">(current)</span></a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src='js/meter.js'></script>
+  </body>
+</html>

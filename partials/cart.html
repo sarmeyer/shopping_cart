@@ -1,0 +1,32 @@
+<span>
+  <h1>My Shopping Bag</h1>
+  <h1 class='total'>Order total: {{vw.subtotal | currency}}</h1>
+</span>
+<table class='table table-bordered' style="width:100%">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Sub-total</th>
+      </tr>
+      <tr ng-repeat='item in vw.cartItems'>
+        <div class="tableData">
+        <td><h3>{{item.name}}</h3>
+        <p><img ng-src="{{item.imageUrl}}"/></p>
+        <p><b>Caffeine Scale:</b> {{item.caffeineScale}}</p>
+        <p><b>Ingredients:</b> {{item.ingredients}}</p>
+        <p><b>Rating:</b> {{item.rating}}</p>
+        </td>
+      </div>
+      <td>
+        <input type="number" min='0' ng-model='newQty' ng-show='!edit'>
+        <p ng-show='edit'>{{item.qty}}</p>
+      </td>
+      <td>
+        <b>{{(item.price/100) * item.qty | currency}}</b>
+      </td>
+      <td>
+        <button class='btn btn-warning' ng-click="editItems(item,newQty)">{{edit && 'Edit' || 'Save'}}</button>
+        <button type="button" class='btn btn-danger' ng-click='remove(item, item.qty)'>Remove</button>
+      </td>
+    </tr>
+</table>
